@@ -38,9 +38,12 @@ export default function AutumnCollectionSection() {
       />
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 mt-10 mb-40">
         {cards.map((item, index) => (
-          <div key={index} className="flex flex-col gap-4 relative">
-            <Image src={item.img} alt="img" />
-            <p>{item.title}</p>
+          <div
+            key={index}
+            className="flex flex-col gap-4 relative rounded-xl transition-transform duration-300 hover:scale-105 hover:text-red-500 cursor-pointer"
+          >
+            <Image src={item.img} alt="img" className="rounded-t-xl" />
+            <p className="px-4 pb-4">{item.title}</p>
             <div className="absolute top-2 right-12 bg-gray-300 p-2 rounded-full cursor-pointer text-red-500">
               <Heart />
             </div>

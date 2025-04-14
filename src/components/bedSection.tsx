@@ -1,13 +1,21 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 interface BedSectionProps {
   img: any;
   bgColor: string;
 }
+
 export default function BedSection({ img, bgColor }: BedSectionProps) {
   return (
-    <div
+    <motion.div
       className={`${bgColor} mt-20 rounded-4xl flex items-center justify-between text-white p-20 relative`}
+      whileHover={{
+        boxShadow: "0px 0px 50px rgba(255, 0, 0, 0.6)",
+      }}
+      transition={{ type: "spring", stiffness: 200, damping: 20 }}
     >
       <div className="flex flex-col gap-10">
         <p className="text-8xl font-bold">100%</p>
@@ -26,6 +34,6 @@ export default function BedSection({ img, bgColor }: BedSectionProps) {
           Toplam
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 }

@@ -1,6 +1,8 @@
+import TgLink from "@/components/tgLink";
 import Footer from "./footer";
 import "./globals.css";
 import Menu from "./menu";
+import "leaflet/dist/leaflet.css";
 
 export default function RootLayout({
   children,
@@ -9,9 +11,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className="relative">
         <Menu />
         {children}
+        <TgLink />
         <Footer />
       </body>
     </html>

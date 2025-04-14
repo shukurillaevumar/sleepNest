@@ -5,10 +5,14 @@ import { useState } from "react";
 import Image from "next/image";
 import Logo from "../../public/Logo.png";
 
+import { usePathname } from "next/navigation";
+
 import { useTranslation } from "react-i18next";
 import "./i18n";
 
 import { motion, AnimatePresence } from "framer-motion";
+
+import Link from "next/link";
 
 import {
   Instagram,
@@ -18,6 +22,8 @@ import {
 } from "lucide-react";
 
 export default function Menu() {
+  const pathname = usePathname();
+
   const { t, i18n } = useTranslation();
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -34,21 +40,33 @@ export default function Menu() {
     { label: "RU", code: "ru" },
   ];
   return (
-    <div className="p-2 shadow-xl">
+    <div className="p-2 shadow-md sticky top-0 z-9999 bg-white">
       <div className="container mx-auto flex justify-between items-center">
-        <Image src={Logo} alt="Logo" />
+        <Link href={"/"}>
+          <Image src={Logo} alt="Logo" />
+        </Link>
         <div className="md:hidden cursor-pointer" onClick={toggleMenu}>
           {menuOpen ? <CloseIcon /> : <MenuIcon />}
         </div>
-        <div className="hidden md:flex items-center gap-6 text-[#a17f4a] font-semibold">
-          <ul className="flex gap-4">
+        <div className="hidden md:flex items-center gap-6 text-[#a17f4a]">
+          <ul className="flex gap-4 text-lg">
             {[
-              { name: "Bosh sahifa", id: "home" },
-              { name: "To'plam", id: "about" },
-              { name: "Biz haqimizda", id: "tours" },
-              { name: "Kontaktlar", id: "contacts" },
-            ].map(({ name, id }) => (
-              <li key={id}>{name}</li>
+              { name: "Bosh sahifa", path: "/" },
+              { name: "To'plam", path: "/collection" },
+              { name: "Biz haqimizda", path: "/about" },
+              { name: "Kontaktlar", path: "/contacts" },
+            ].map(({ name, path }) => (
+              <Link key={path} href={path}>
+                <li
+                  className={`${
+                    pathname === path
+                      ? "text-[#a17f4a] font-semibold"
+                      : "text-black"
+                  } transition duration-200 hover:text-[#a17f4a]`}
+                >
+                  {name}
+                </li>
+              </Link>
             ))}
           </ul>
 
@@ -80,13 +98,15 @@ export default function Menu() {
           >
             <ul className="flex flex-col gap-2">
               {[
-                { name: t("Home"), id: "home" },
-                { name: t("About"), id: "about" },
-                { name: t("Tours"), id: "tours" },
-                { name: t("Contacts"), id: "contacts" },
-              ].map(({ name, id }) => (
-                <li key={id} className="text-center">
-                  {name}
+                { name: "Bosh sahifa", path: "/" },
+                { name: "To'plam", path: "/collection" },
+                { name: "Biz haqimizda", path: "/about" },
+                { name: "Kontaktlar", path: "/contacts" },
+              ].map(({ name, path }) => (
+                <li key={path} className="text-center">
+                  <Link href={path} onClick={() => setMenuOpen(false)}>
+                    {name}
+                  </Link>
                 </li>
               ))}
             </ul>

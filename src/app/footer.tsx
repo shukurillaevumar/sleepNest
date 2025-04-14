@@ -47,6 +47,14 @@ export default function Footer() {
           <p className="text-gray-400">Kamida bitta roʻyxatni tanlang.</p>
         </form>
       </div>
+      <div className="bg-black w-full p-5 mt-10">
+        <div className="container mx-auto">
+          <p className="text-gray-400">
+            © 2024 MChJ Ekologik Toza Uyqu Mahsulotlari Barcha huquqlar
+            himoyalangan.
+          </p>
+        </div>
+      </div>
     </div>
   );
 }
