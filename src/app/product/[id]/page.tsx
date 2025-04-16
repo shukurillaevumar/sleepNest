@@ -1,11 +1,7 @@
 import Image from "next/image";
 import { products } from "../../data/products";
 
-type Props = {
-  params: { id: string };
-};
-
-export default function ProductPage({ params }: Props) {
+export default function ProductPage({ params }: { params: { id: string } }) {
   const product = products.find((p) => p.id === parseInt(params.id));
 
   if (!product) {
