@@ -2,11 +2,13 @@ import Image from "next/image";
 import { products } from "../../data/products";
 
 interface ProductProps {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }
 
-export default function ProductPage({ params }: ProductProps) {
-  const product = products.find((p) => p.id === parseInt(params.id));
+export default async function ProductPage(props: ProductProps) {
+  const params = await props.params;
+  const { id } = await params;
+  const product = products.find((p) => p.id === parseInt(id));
 
   if (!product) {
     return <div className="p-10">Mahsulot topilmadi</div>;
