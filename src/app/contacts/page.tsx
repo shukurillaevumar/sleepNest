@@ -38,7 +38,7 @@ export default function Contacts() {
         </button>
       </motion.form>
 
-      <div className="w-full">
+      <div className="w-full h-[300px] md:h-auto">
         <DynamicMap />
       </div>
     </div>

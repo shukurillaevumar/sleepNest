@@ -51,10 +51,10 @@ export default function Menu() {
         <div className="hidden md:flex items-center gap-6 text-[#a17f4a]">
           <ul className="flex gap-4 text-lg">
             {[
-              { name: "Bosh sahifa", path: "/" },
-              { name: "To'plam", path: "/collection" },
-              { name: "Biz haqimizda", path: "/about" },
-              { name: "Kontaktlar", path: "/contacts" },
+              { name: `${t("Home")}`, path: "/" },
+              { name: `${t("Collection")}`, path: "/collection" },
+              { name: `${t("AboutUs")}`, path: "/about" },
+              { name: `${t("Contacts")}`, path: "/contacts" },
             ].map(({ name, path }) => (
               <Link key={path} href={path}>
                 <li
@@ -98,10 +98,10 @@ export default function Menu() {
           >
             <ul className="flex flex-col gap-2">
               {[
-                { name: "Bosh sahifa", path: "/" },
-                { name: "To'plam", path: "/collection" },
-                { name: "Biz haqimizda", path: "/about" },
-                { name: "Kontaktlar", path: "/contacts" },
+                { name: `${t("Home")}`, path: "/" },
+                { name: `${t("Collection")}`, path: "/collection" },
+                { name: `${t("AboutUs")}`, path: "/about" },
+                { name: `${t("Contacts")}`, path: "/contacts" },
               ].map(({ name, path }) => (
                 <li key={path} className="text-center">
                   <Link href={path} onClick={() => setMenuOpen(false)}>
@@ -124,10 +124,6 @@ export default function Menu() {
                   {label}
                 </li>
               ))}
-              <div className="flex gap-4 mt-2">
-                <Instagram className="cursor-pointer" />
-                <Send className="cursor-pointer" />
-              </div>
             </ul>
           </motion.div>
         )}

@@ -49,7 +49,7 @@ export default function About() {
     },
   ];
   return (
-    <div className="container mx-auto mt-30 grid grid-cols-3 items-center">
+    <div className="container mx-auto mt-30 grid grid-cols-3 items-center max-xl:grid-cols-1">
       <div className="flex flex-col gap-4 col-span-1">
         {content.map((item, index) => (
           <p
@@ -60,11 +60,13 @@ export default function About() {
           </p>
         ))}
       </div>
-      <Image
-        src={Img}
-        alt="img"
-        className="col-span-2 justify-self-end rounded-4xl shadow-2xl"
-      />
+      <div className="max-xl:flex max-xl:items-start max-xl:mt-10">
+        <Image
+          src={Img}
+          alt="img"
+          className="col-span-2 justify-self-end rounded-4xl shadow-2xl max-xl:col-span-1"
+        />
+      </div>
     </div>
   );
 }

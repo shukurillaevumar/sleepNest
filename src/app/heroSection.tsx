@@ -15,7 +15,7 @@ export default function HeroSection() {
   return (
     <div className="container mx-auto mt-5">
       <motion.div
-        className="rounded-4xl relative h-150 flex justify-end"
+        className="rounded-4xl relative h-150 flex justify-end max-xl:h-100"
         animate={{ backgroundColor: bgColors }}
         transition={{
           duration: 10,
@@ -23,10 +23,31 @@ export default function HeroSection() {
           repeatType: "loop",
         }}
       >
-        <Image src={img} alt="img" className="absolute -top-20 -left-40" />
-        <div className="flex flex-col items-end p-5 gap-10">
+        <Image
+          src={img}
+          alt="img"
+          className="
+    absolute 
+    -top-20 -left-40
+
+    max-2xl:w-250 
+    max-2xl:top-10 
+
+    max-xl:w-300 
+    max-xl:-top-18 
+
+    max-lg:-top-10 
+
+    max-md:left-1/2 
+    max-md:top-1/6
+    max-md:-translate-x-1/2 
+    max-md:transform
+  "
+        />
+
+        <div className="flex flex-col items-end p-5 gap-10 max-md:z-10">
           <motion.p
-            className="text-2xl font-semibold"
+            className="text-2xl font-semibold max-xl:text-xl"
             animate={{ color: textColors }}
             transition={{
               duration: 10,
@@ -37,7 +58,7 @@ export default function HeroSection() {
             Ekologik
           </motion.p>
           <motion.p
-            className="text-6xl"
+            className="text-6xl max-xl:text-3xl"
             animate={{ color: textColors }}
             transition={{
               duration: 10,
@@ -48,7 +69,7 @@ export default function HeroSection() {
             Toza Uyqu
           </motion.p>
           <motion.p
-            className="text-8xl"
+            className="text-8xl max-xl:text-5xl"
             animate={{ color: textColors }}
             transition={{
               duration: 10,

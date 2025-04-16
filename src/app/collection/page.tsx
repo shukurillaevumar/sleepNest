@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { products } from "../data/cards";
+import { products } from "../data/products";
 import Image from "next/image";
 import { Heart } from "lucide-react";
 
@@ -65,7 +65,7 @@ export default function Collection() {
                 {product.season} Collection
               </p>
             </div>
-            <div className="absolute top-2 right-12 bg-gray-300 p-2 rounded-full cursor-pointer text-red-500">
+            <div className="absolute top-2 right-12 bg-gray-300 p-2 rounded-full cursor-pointer text-red-500 max-2xl:right-2">
               <Heart />
             </div>
           </div>
