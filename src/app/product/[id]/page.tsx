@@ -1,7 +1,11 @@
 import Image from "next/image";
 import { products } from "../../data/products";
 
-export default function ProductPage({ params }: { params: { id: string } }) {
+interface ProductProps {
+  params: { id: string };
+}
+
+export default function ProductPage({ params }: ProductProps) {
   const product = products.find((p) => p.id === parseInt(params.id));
 
   if (!product) {
