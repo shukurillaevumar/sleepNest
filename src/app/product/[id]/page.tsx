@@ -5,7 +5,7 @@ type Props = {
   params: { id: string };
 };
 
-export default async function ProductPage({ params }: Props) {
+export default function ProductPage({ params }: Props) {
   const product = products.find((p) => p.id === parseInt(params.id));
 
   if (!product) {
