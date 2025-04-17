@@ -42,7 +42,11 @@ export default function AutumnCollectionSection() {
         {cards.map((item, index) => (
           <Link key={item.id} href={`/product/${item.id}`}>
             <div className="flex flex-col gap-4 relative rounded-xl transition-transform duration-300 hover:scale-105 hover:text-red-500 cursor-pointer">
-              <Image src={item.img} alt={item.title} className="rounded-t-xl" />
+              <Image
+                src={item.img}
+                alt={item.title}
+                className="rounded-t-xl max-md:w-full "
+              />
               <p className="px-4 pb-4">{item.title}</p>
               <div className="absolute top-2 right-12 bg-gray-300 p-2 rounded-full cursor-pointer text-red-500 max-2xl:right-2">
                 <Heart />

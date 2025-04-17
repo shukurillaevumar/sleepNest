@@ -20,9 +20,9 @@ export default function Collection() {
   });
 
   return (
-    <div className="container mx-auto mt-20">
+    <div className="container mx-auto mt-20 max-sm:p-2">
       <h1 className="text-3xl font-bold mb-6">Collection</h1>
-      <div className="flex gap-4 items-center mb-6">
+      <div className="flex gap-4 items-center mb-6 max-sm:flex-col max-sm:items-start">
         <input
           type="text"
           placeholder="Search..."

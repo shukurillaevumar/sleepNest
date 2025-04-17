@@ -49,7 +49,7 @@ export default function About() {
     },
   ];
   return (
-    <div className="container mx-auto mt-30 grid grid-cols-3 items-center max-xl:grid-cols-1">
+    <div className="container mx-auto mt-30 grid grid-cols-3 items-center max-xl:grid-cols-1 max-sm:p-2">
       <div className="flex flex-col gap-4 col-span-1">
         {content.map((item, index) => (
           <p

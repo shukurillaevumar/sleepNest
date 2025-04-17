@@ -15,7 +15,7 @@ export default function HeroSection() {
   return (
     <div className="container mx-auto mt-5">
       <motion.div
-        className="rounded-4xl relative h-150 flex justify-end max-xl:h-100"
+        className="rounded-4xl relative h-150 flex justify-end max-xl:h-100 max-sm:h-80"
         animate={{ backgroundColor: bgColors }}
         transition={{
           duration: 10,
@@ -69,7 +69,7 @@ export default function HeroSection() {
             Toza Uyqu
           </motion.p>
           <motion.p
-            className="text-8xl max-xl:text-5xl"
+            className="text-8xl max-xl:text-5xl max-sm:text-4xl"
             animate={{ color: textColors }}
             transition={{
               duration: 10,

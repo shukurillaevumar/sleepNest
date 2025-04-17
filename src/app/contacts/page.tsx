@@ -8,7 +8,7 @@ const DynamicMap = dynamic(() => import("../../components/Map"), {
 
 export default function Contacts() {
   return (
-    <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 mt-30">
+    <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 mt-30 max-sm:p-2">
       <motion.form
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
