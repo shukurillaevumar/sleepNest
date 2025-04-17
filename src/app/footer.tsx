@@ -15,7 +15,7 @@ export default function Footer() {
 
   return (
     <div className="mt-20">
-      <div className="container mx-auto flex items-center justify-between max-xl:flex-wrap">
+      <div className="container mx-auto flex items-center justify-between max-xl:flex-wrap max-sm:p-2">
         <div className="w-[33%] max-md:w-full">
           <Image src={Logo} alt="logo" />
           <p className="text-lg mt-5 text-gray-400 max-md:text-sm max-md:mb-10">

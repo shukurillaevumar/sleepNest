@@ -6,7 +6,7 @@ import WinterCollectionSection from "./winterCollectionSection";
 
 export default function Home() {
   return (
-    <div>
+    <div className="max-sm:p-2">
       <HeroSection />
       <WinterCollectionSection />
       <AutumnCollectionSection />
