@@ -1,51 +1,44 @@
+"use client";
 import Image from "next/image";
 import Img from "../../../public/aboutImage/aboutImg-BafZ-cOo.png";
+import { useTranslation } from "react-i18next";
+import "../../app/i18n";
 export default function About() {
+  const { t, i18n } = useTranslation();
   const content = [
-    { title: "Ecologically Clean Sleep Products" },
+    { title: t("AboutTitle") },
     {
-      title:
-        "Our company, which produces cotton fabrics and ecological bags, has been supplying cotton fabrics to the global market for many years.",
+      title: t("AboutP1"),
     },
     {
-      title:
-        "Our company started its activity 17 years ago and has been gaining the trust of our customers.",
+      title: t("AboutP2"),
     },
     {
-      title:
-        "The main goal of our company is to create high-quality, durable and environmentally friendly products.",
+      title: t("AboutP3"),
     },
     {
-      title:
-        "Manufacturing processes are fully environmentally friendly and environmentally friendly.",
+      title: t("AboutP4"),
     },
     {
-      title:
-        "Using modern technologies, we are able to produce various cotton products at a high level.",
+      title: t("AboutP5"),
     },
     {
-      title:
-        "Also, we act as the official representative of DongJu weaving equipment in Uzbekistan.",
+      title: t("AboutP6"),
     },
     {
-      title:
-        "Every year, more than 80 types of products are produced in our factory, as a result of which the company ensures high quality and stable production.",
+      title: t("AboutP7"),
     },
     {
-      title:
-        "More than 50 looms are operating in our enterprise based on modern technologies.",
+      title: t("AboutP8"),
     },
     {
-      title:
-        "In our production processes, we ensure the production of only high-quality and environmentally safe products.",
+      title: t("AboutP9"),
     },
     {
-      title:
-        "According to the requirements of our customers, the production of eco-friendly and modern design bags has been launched.",
+      title: t("AboutP10"),
     },
     {
-      title:
-        "Our company is always happy to provide quality products and high level of service to its customers.",
+      title: t("AboutP11"),
     },
   ];
   return (
@@ -60,7 +53,7 @@ export default function About() {
           </p>
         ))}
       </div>
-      <div className="max-xl:flex max-xl:items-start max-xl:mt-10">
+      <div className="max-xl:flex max-xl:items-start max-xl:mt-10 col-span-2">
         <Image
           src={Img}
           alt="img"

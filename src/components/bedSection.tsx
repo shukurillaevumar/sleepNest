@@ -2,13 +2,15 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-
+import { useTranslation } from "react-i18next";
+import "../app/i18n";
 interface BedSectionProps {
   img: any;
   bgColor: string;
 }
 
 export default function BedSection({ img, bgColor }: BedSectionProps) {
+  const { t, i18n } = useTranslation();
   return (
     <motion.div
       className={`${bgColor} mt-30 rounded-4xl flex items-center justify-between text-white p-20 relative max-xl:flex-col max-xl:p-5 max-xl:gap-5`}
@@ -23,18 +25,13 @@ export default function BedSection({ img, bgColor }: BedSectionProps) {
 
       <div className="flex flex-col gap-10 max-xl:text-center max-xl:gap-5 max-xl:mt-65">
         <p className="text-8xl font-bold max-2xl:text-7xl">100%</p>
-        <p className="text-xl max-2xl:text-lg">Material sifati</p>
+        <p className="text-xl max-2xl:text-lg">{t("MaterialQuality")}</p>
       </div>
       <div className="w-120 flex flex-col gap-5 items-start z-10 max-xl:text-center max-sm:w-auto">
-        <p className="text-3xl max-2xl:text-2xl">
-          "Ekologik Toza Uyqu Mahsulotlari"
-        </p>
-        <p>
-          ko'p yillar davomida butun dunyoda foydalanish uchun paxta matolarini
-          ishlab chiqaradigan kompaniya bo'lib kelgan
-        </p>
+        <p className="text-3xl max-2xl:text-2xl">{t("BedTitle")}</p>
+        <p>{t("BedSubTitle")}</p>
         <button className="bg-white py-3 px-8 cursor-pointer text-black rounded-2xl max-xl:mx-auto">
-          Toplam
+          {t("BedButtonText")}
         </button>
       </div>
     </motion.div>

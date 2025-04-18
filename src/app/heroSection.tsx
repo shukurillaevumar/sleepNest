@@ -7,11 +7,15 @@ import Cards from "@/components/heroSectionCards";
 import BedSection from "@/components/bedSection";
 import verticalBed from "../../public/mainPicture/vertical_Bed (1).png";
 
+import { useTranslation } from "react-i18next";
+import "./i18n";
+
 const bgColors = ["#f5efe6", "#e0d7c5", "#d2b48c", "#a17f4a", "#f5efe6"];
 
 const textColors = ["#a17f4a", "#8c6e3f", "#6b4f29", "#fff", "#a17f4a"];
 
 export default function HeroSection() {
+  const { t, i18n } = useTranslation();
   return (
     <div className="container mx-auto mt-5">
       <motion.div
@@ -55,7 +59,7 @@ export default function HeroSection() {
               repeatType: "loop",
             }}
           >
-            Ekologik
+            {t("Enviromental")}
           </motion.p>
           <motion.p
             className="text-6xl max-xl:text-3xl"
@@ -66,7 +70,7 @@ export default function HeroSection() {
               repeatType: "loop",
             }}
           >
-            Toza Uyqu
+            {t("CleanSleep")}
           </motion.p>
           <motion.p
             className="text-8xl max-xl:text-5xl max-sm:text-4xl"
@@ -77,7 +81,7 @@ export default function HeroSection() {
               repeatType: "loop",
             }}
           >
-            Mahsulotlari
+            {t("Products")}
           </motion.p>
         </div>
       </motion.div>

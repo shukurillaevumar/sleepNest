@@ -1,26 +1,29 @@
 import { Truck, BadgeCheck, Headset, Wallet } from "lucide-react";
 
+import { useTranslation } from "react-i18next";
+import "../app/i18n";
 export default function Cards() {
+  const { t, i18n } = useTranslation();
   const cards = [
     {
       icon: Truck,
-      title: "Yetkazib berish bepul",
-      desc: "Barcha buyurtmalar uchun bepul yetkazib berish",
+      title: t("FreeShipping"),
+      desc: t("FreeShippingDesc"),
     },
     {
       icon: BadgeCheck,
-      title: "Qaytish kafolati",
-      desc: "30 kunlik pulni qaytarish",
+      title: t("ReturnGuarantee"),
+      desc: t("ReturnGuaranteeDesc"),
     },
     {
       icon: Headset,
-      title: "24/7 onlayn qo'llab-quvvatlash",
-      desc: "24/7 texnik yordam",
+      title: t("24/7Support"),
+      desc: t("24/7SupportDesc"),
     },
     {
       icon: Wallet,
-      title: "Xavfsiz to'lov",
-      desc: "Barcha to'lov usullari qabul qilinadi",
+      title: t("SecurePayment"),
+      desc: t("SecurePaymentDesc"),
     },
   ];
 

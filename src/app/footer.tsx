@@ -5,7 +5,11 @@ import Logo from "../../public/footerImages/Logo.png";
 import { useState } from "react";
 import Link from "next/link";
 
+import { useTranslation } from "react-i18next";
+import "./i18n";
+
 export default function Footer() {
+  const { t, i18n } = useTranslation();
   const [inputValue, setInputValue] = useState<string>("");
 
   // Функция для очистки поля
@@ -19,38 +23,36 @@ export default function Footer() {
         <div className="w-[33%] max-md:w-full">
           <Image src={Logo} alt="logo" />
           <p className="text-lg mt-5 text-gray-400 max-md:text-sm max-md:mb-10">
-            “Ekologik Toza Uyqu Mahsulotlat” koʻp yillardan buyon butun dunyoda
-            foydalanish uchun paxta matolari ishlab chiqaradigan kompaniya
-            hisoblanadi.
+            {t("FooterDesc")}
           </p>
         </div>
 
         <ul className="flex flex-col gap-3">
-          <li className="text-2xl font-semibold">Menyu</li>
+          <li className="text-2xl font-semibold">{t("FooterMenu")}</li>
           <Link href={"/"}>
             <li className="hover:text-red-500 transition-all duration-150 ease-in">
-              Bosh sahifa
+              {t("Home")}
             </li>
           </Link>
           <Link href={"/collection"}>
             <li className="hover:text-red-500 transition-all duration-150 ease-in">
-              To'plam
+              {t("Collection")}
             </li>
           </Link>
           <Link href={"/about"}>
             <li className="hover:text-red-500 transition-all duration-150 ease-in">
-              Biz haqimizda
+              {t("AboutUs")}
             </li>
           </Link>
           <Link href={"/contacts"}>
             <li className="hover:text-red-500 transition-all duration-150 ease-in">
-              Kontaktlar
+              {t("Contacts")}
             </li>
           </Link>
         </ul>
 
         <ul className="flex flex-col gap-3">
-          <li className="text-2xl font-semibold">Kontaktlar</li>
+          <li className="text-2xl font-semibold">{t("FooterContacts")}</li>
           <li>Buxoro, st. Alpomish 80.</li>
           <li>Email: sleepnest@gmail.com</li>
           <li>Telegram: sleepnest</li>
@@ -59,12 +61,12 @@ export default function Footer() {
 
         <form className="flex flex-col gap-4 max-xl:mt-10">
           <label className="text-xl font-semibold">
-            Elektron pochtamizga obuna bo'ling
+            {t("FooterEmailSubscrubtion")}
           </label>
           <div className="flex items-center border border-black rounded-full overflow-hidden">
             <input
               type="email"
-              placeholder="Elektron pochtangiz"
+              placeholder={t("FooterEmailSubscrubtion")}
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
               className="flex-grow p-5 outline-none text-sm"
@@ -73,18 +75,15 @@ export default function Footer() {
               onClick={handleClearInput}
               className="bg-red-600 text-white px-5 py-3 rounded-full hover:bg-red-700 transition cursor-pointer mr-1"
             >
-              Obuna Bo'ling
+              {t("FooterSubscribeBtn")}
             </button>
           </div>
-          <p className="text-gray-400">Kamida bitta roʻyxatni tanlang.</p>
+          <p className="text-gray-400"> {t("FooterSelectList")}</p>
         </form>
       </div>
       <div className="bg-black w-full p-5 mt-10">
         <div className="container mx-auto">
-          <p className="text-gray-400">
-            © 2024 MChJ Ekologik Toza Uyqu Mahsulotlari Barcha huquqlar
-            himoyalangan.
-          </p>
+          <p className="text-gray-400">{t("FooterText")}</p>
         </div>
       </div>
     </div>

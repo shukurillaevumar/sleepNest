@@ -1,3 +1,5 @@
+"use client";
+
 import SectionHead from "@/components/sectionHead";
 
 import { Heart } from "lucide-react";
@@ -19,25 +21,26 @@ import BedSection from "@/components/bedSection";
 
 import bedImg from "../../public/mainPicture/vertical_Bed (2).png";
 
+import { useTranslation } from "react-i18next";
+import "./i18n";
+
 export default function WinterCollectionSection() {
+  const { t, i18n } = useTranslation();
   const cards = [
-    { img: img1, title: "Kvadratchalar", id: 1 },
-    { img: img2, title: "Ikat", id: 2 },
-    { img: img3, title: "Davralar", id: 3 },
-    { img: img4, title: "Geometriya ko'k", id: 4 },
-    { img: img5, title: "Tropik barglar", id: 5 },
-    { img: img6, title: "Bambi", id: 6 },
-    { img: img7, title: "Vizantiya", id: 7 },
-    { img: img8, title: "Kechki bog'", id: 8 },
-    { img: img9, title: "Pat Markiz", id: 9 },
-    { img: img10, title: "Lavanda atirgullari", id: 10 },
+    { img: img1, title: t("WinterCardTitle1"), id: 1 },
+    { img: img2, title: t("WinterCardTitle2"), id: 2 },
+    { img: img3, title: t("WinterCardTitle3"), id: 3 },
+    { img: img4, title: t("WinterCardTitle4"), id: 4 },
+    { img: img5, title: t("WinterCardTitle5"), id: 5 },
+    { img: img6, title: t("WinterCardTitle6"), id: 6 },
+    { img: img7, title: t("WinterCardTitle7"), id: 7 },
+    { img: img8, title: t("WinterCardTitle8"), id: 8 },
+    { img: img9, title: t("WinterCardTitle9"), id: 9 },
+    { img: img10, title: t("WinterCardTitle10"), id: 10 },
   ];
   return (
     <div className="container mx-auto mt-20">
-      <SectionHead
-        title="Qish kolleksiyasi"
-        desc="Ekologik Toza Uyqu Mahsulotlari"
-      />
+      <SectionHead title={t("WinterCollection")} desc={t("CollectionDesc")} />
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 mt-10 mb-40">
         {cards.map((item, index) => (
           <Link key={item.id} href={`/product/${item.id}`}>
