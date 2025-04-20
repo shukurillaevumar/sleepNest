@@ -5,8 +5,8 @@ interface ProductProps {
   params: { id: string };
 }
 
-export default async function ProductPage({ params }: ProductProps) {
-  const { id } = await params;
+export default async function ProductPage(props: ProductProps) {
+  const { id } = await props.params;
   const product = products.find((p) => p.id === parseInt(id));
 
   if (!product) {
