@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import "../app/i18n";
+import Link from "next/link";
 interface BedSectionProps {
   img: any;
   bgColor: string;
@@ -30,9 +31,11 @@ export default function BedSection({ img, bgColor }: BedSectionProps) {
       <div className="w-120 flex flex-col gap-5 items-start z-10 max-xl:text-center max-sm:w-auto">
         <p className="text-3xl max-2xl:text-2xl">{t("BedTitle")}</p>
         <p>{t("BedSubTitle")}</p>
-        <button className="bg-white py-3 px-8 cursor-pointer text-black rounded-2xl max-xl:mx-auto">
-          {t("BedButtonText")}
-        </button>
+        <Link href={"/collection"}>
+          <button className="bg-white py-3 px-8 cursor-pointer text-black rounded-2xl max-xl:mx-auto">
+            {t("BedButtonText")}
+          </button>
+        </Link>
       </div>
     </motion.div>
   );

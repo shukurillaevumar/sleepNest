@@ -63,17 +63,17 @@ export default function Footer() {
           <label className="text-xl font-semibold">
             {t("FooterEmailSubscrubtion")}
           </label>
-          <div className="flex items-center border border-black rounded-full overflow-hidden">
+          <div className="flex items-center border border-black rounded-full overflow-hidden max-sm:flex-wrap max-sm:rounded-xl max-sm:justify-center">
             <input
               type="email"
               placeholder={t("FooterEmailSubscrubtion")}
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
-              className="flex-grow p-5 outline-none text-sm"
+              className="flex-grow p-5 outline-none text-sm max-sm:w-auto"
             />
             <button
               onClick={handleClearInput}
-              className="bg-red-600 text-white px-5 py-3 rounded-full hover:bg-red-700 transition cursor-pointer mr-1"
+              className="bg-red-600 text-white px-5 py-3 rounded-full hover:bg-red-700 transition cursor-pointer mr-1 max-sm:mb-2"
             >
               {t("FooterSubscribeBtn")}
             </button>

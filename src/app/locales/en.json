@@ -91,5 +91,21 @@
   "YourEmail": "Your Email",
   "YourNumber": "Your Phone Number",
   "YourText": "Write...",
-  "Send": "Send"
+  "Send": "Send",
+
+  "reviews": "Product Reviews",
+  "noRating": "No ratings yet.",
+  "leaveReview": "Leave your review",
+  "name": "Name*",
+  "email": "Email*",
+  "yourReview": "Your Review*",
+  "reviewBtn": "Submit",
+
+  "Material": "Material:",
+  "Pillowcase": "Pillowcase:",
+  "Bedding": "Bedding:",
+  "Bed": "Bed:",
+  "Size": "Size:",
+  "Manufacturer": "Manufacturer",
+  "Category": "Category:"
 }

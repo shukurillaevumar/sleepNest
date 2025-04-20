@@ -91,5 +91,21 @@
   "YourEmail": "Sizning elektron pochtangiz",
   "YourNumber": "Telefon Raqamingiz",
   "YourText": "Yozing...",
-  "Send": "Jo'natish"
+  "Send": "Jo'natish",
+
+  "reviews": "Mahsulot haqida sharhlar",
+  "noRating": "Hozircha sharhlar yo'q.",
+  "leaveReview": "O'z sharhingizni qoldiring",
+  "name": "Ism *",
+  "email": "Elektron pochta *",
+  "yourReview": "Sizning sharhingiz *",
+  "reviewBtn": "Sharhni yuborish",
+
+  "Material": "Material:",
+  "Pillowcase": "Yostiq kiyimi:",
+  "Bedding": "Choyshab:",
+  "Bed": "Ko'rpa-to'shak:",
+  "Size": "Hajmi:",
+  "Manufacturer": "Ishlab chiqaruvchi:",
+  "Category": "Kategoriya:"
 }
